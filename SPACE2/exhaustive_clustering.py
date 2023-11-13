@@ -148,4 +148,4 @@ def cluster_with_algorithm(method, files, selection=reg_def["CDR_all"], anchors=
     meta_data, rmsd_matrices = matrices_to_pandas_list(matrices_dict)
     cluster_labels = cluster_martices(rmsd_matrices, method, n_jobs=n_jobs)
 
-    return get_clustering(meta_data, cluster_labels)
+    return get_clustering(meta_data, cluster_labels), matrices_dict, rmsd_matrices
